@@ -1,37 +1,37 @@
 package main.java.com.sistema_gerenciamento.domain;
 
-import main.java.com.sistema_gerenciamento.enums.TypeShop;
+import java.util.ArrayList;
 
 public class Shop {
-    TypeShop typeShop;
     int ID;
     String name;
     String location;
-    Storage storage;
+    ArrayList<Product> products;
+    ArrayList<Operation> operations;
 
-    public Shop(TypeShop typeShop, int ID, String name, String location, Storage storage) {
-        this.typeShop = typeShop;
+    public Shop(int ID, String name, String location) {
         this.ID = ID;
         this.name = name;
         this.location = location;
-        this.storage = storage;
+        this.products = new ArrayList<>();
+        this.operations = new ArrayList<>();
     }
 
     /*
      * Getters.
      */
-    public TypeShop getTypeShop() { return this.typeShop; }
     public int getID() { return this.ID; }
     public String getName() { return this.name; }
     public String getLocation() { return this.location; }
-    public Storage getStorage() { return this.storage; }
+    public ArrayList<Product> getProducts() { return this.products; }
+    public ArrayList<Operation> getOperations() { return this.operations; }
 
     /*
      * Setters.
      */
-    public void setTypeShop(TypeShop typeShop) { this.typeShop = typeShop; }
     public void setID(int ID) { this.ID = ID; }
     public void setName(String name) { this.name = name; }
     public void setLocation(String location) { this.location = location; }
-    public void setStorage(Storage storage) { this.storage = storage; }
+    public void setProducts(ArrayList<Product> products) { this.products = products; }
+    public void setOperations(ArrayList<Operation> operations) { this.operations = operations; }
 }

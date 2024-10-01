@@ -8,13 +8,13 @@ public class Product {
     private double salePrice;
     private long stockQuantity;
 
-    public Product(int ID, String name, String description, double costPrice, double salePrice, long stockQuantity) {
+    public Product(int ID, String name, String description, double costPrice, double salePrice) {
         this.ID = ID;
         this.name = name;
         this.description = description;
         this.costPrice = costPrice;
         this.salePrice = salePrice;
-        this.stockQuantity = stockQuantity;
+        this.stockQuantity = 0;
     }
 
     /*
