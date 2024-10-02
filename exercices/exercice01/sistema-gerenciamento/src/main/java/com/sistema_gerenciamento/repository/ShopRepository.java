@@ -19,7 +19,7 @@ public class ShopRepository {
 
     // Methods to Products.
     /**
-     * This function register a product in storage.
+     * This function registers a product in storage.
      * @param product Product that will be added to stock
      */
     public void registerProduct(Product product) {
@@ -27,29 +27,35 @@ public class ShopRepository {
     }
 
     /**
-     * This function unsubscribe a product in storage.
-     * @param ID ID product that will be removed to stock.
+     * This function unsubscribes a product in storage.
+     * @param ID ID product that will be removed from stock.
      */
     public void unsubscribeProduct(int ID) {
         this.shop.getProducts().removeIf(product -> { return product.getID() == ID; });
     }
 
     /**
-     * Return all products in stock.
-     * @return Product that will be returned.
+     * Returns all products in stock.
+     * @return List of all products in stock.
      */
-    public ArrayList<Product> allProducts() { return this.shop.getProducts(); }
+    public ArrayList<Product> allProducts() {
+        return this.shop.getProducts();
+    }
 
     // Methods to Operations.
     /**
-     * // Add an operation in stock.
+     * This function adds an operation to the list of operations in stock.
      * @param operation Operation that will be saved in stock.
      */
-    public void addOperation(Operation operation) { this.shop.getOperations().add(operation); }
+    public void addOperation(Operation operation) {
+        this.shop.getOperations().add(operation);
+    }
 
     /**
-     * Return all operations in stock.
-     * @return Operations that will be returned.
+     * Returns all operations performed on the stock.
+     * @return List of all operations in stock.
      */
-    public ArrayList<Operation> allOperations() { return this.shop.getOperations(); }
+    public ArrayList<Operation> allOperations() {
+        return this.shop.getOperations();
+    }
 }

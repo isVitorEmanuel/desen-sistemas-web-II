@@ -105,7 +105,11 @@ public class ShopService {
                 .collect(Collectors.toList());
     }
 
-    // TODO: Add comments.
+    /**
+     * Registers a purchase operation and updates the stock for a product.
+     * @param ID ID of the product to be purchased.
+     * @param quantity Quantity to be added to the stock.
+     */
     public void buyProduct(int ID, int quantity) {
         Optional<Product> productOptional = this.findProductById(ID);
 
@@ -118,7 +122,11 @@ public class ShopService {
         }
     }
 
-    // TODO: Add comments.
+    /**
+     * Registers a sale operation and updates the stock for a product.
+     * @param ID ID of the product to be sold.
+     * @param quantity Quantity to be removed from the stock.
+     */
     public void saleProduct(int ID, int quantity) {
         Optional<Product> productOptional = this.findProductById(ID);
 
